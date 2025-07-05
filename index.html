@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Nouval - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'gradient': 'gradient 15s ease infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        gradient: {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    <i class="fas fa-code text-blue-600"></i>
+                    Nouval
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">About</a>
+                    <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Contact</a>
+                </div>
+
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#hero" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+                <a href="#about" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">About</a>
+                <a href="#projects" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+                <a href="#contact" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative w-full min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-blue-900 dark:to-purple-900"></div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-300/20 rounded-full animate-float"></div>
+            <div class="absolute top-3/4 right-1/4 w-48 h-48 bg-purple-300/20 rounded-full animate-float" style="animation-delay: -2s;"></div>
+            <div class="absolute top-1/2 left-3/4 w-32 h-32 bg-pink-300/20 rounded-full animate-float" style="animation-delay: -4s;"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
+                <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                    Muhammad Nouval
+                </span>
+            </h1>
+            <p class="text-xl sm:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="200">
+                Front End Developer & UI/UX Designer
+            </p>
+            <p class="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="400">
+                Creating beautiful and functional web experiences that delight users. Passionate about coding, design, and everything in between.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="600">
+                <a href="#projects" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    View My Projects
+                </a>
+                <a href="#contact" class="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-4 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 hover:scale-105 transition-all duration-300">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-2xl text-gray-400"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4">About Me</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400">A passionate programming learner building the future through code.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                 <div class="profile-card" data-aos="fade-right">
+                    <div class="bg-gradient-to-br from-blue-400 to-purple-600 p-1 rounded-2xl">
+                        <div class="bg-white dark:bg-gray-900 rounded-2xl p-8">
+                            <img src="img/new_mnopal.png" alt="Profile" class="w-full h-80 object-cover rounded-xl mb-6">
+                            <div class="text-center">
+                                <h3 class="text-2xl font-bold mb-2">Muhammad Nouval</h3>
+                                <p class="text-gray-600 dark:text-gray-400">Mahasiswa Informatika</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <h3 class="text-3xl font-bold mb-6">Hello! I'm Muhammad Nouval</h3>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                        I'm a computer science student with a passion for web development and design. I specialize in creating responsive, user-friendly websites and applications.
+                    </p>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+                        With a strong foundation in HTML, CSS, and JavaScript, I enjoy building interactive web experiences that engage users. I also enjoy learning new things.
+                    </p>
+
+                    <!-- Skills -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <i class="fab fa-react text-3xl text-blue-500 mb-2"></i>
+                            <p class="font-semibold">React ⏳</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <i class="fab fa-js-square text-3xl text-yellow-500 mb-2"></i>
+                            <p class="font-semibold">JavaScript</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <i class="fab fa-python text-3xl text-yellow-500 mb-2"></i>
+                            <p class="font-semibold">Python</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <i class="fas fa-database text-3xl text-purple-500 mb-2"></i>
+                            <p class="font-semibold">MySQL</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <i class="fas fa-globe text-3xl text-orange-500 mb-2"></i>
+                            <p class="font-semibold">HTML & CSS</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <i class="fab fa-figma text-3xl text-pink-500 mb-2"></i>
+                            <p class="font-semibold">UI/UX Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4">My Projects</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400">Here are some of my recent works</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden">
+                        <img src="img/projek_perpus.png" alt="E-commerce Platform" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-Library Platform</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">A Full Stack e-library solution with PHP, Codeigniter 4, and MySQL. Features include user authentication, fines, and admin dashboard</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">PHP</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Codeigniter 4</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">MySQL</span>
+                        </div>
+                        <a href="https://github.com/Muhammad-Nouval-Pro/Projek-Saya" class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-300" target="_blank">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden">
+                        <img src="img/baru-mock-lelang.png" alt="Task Management App" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">UI/UX Design App Auction</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">A modern auction app design focused on user experience, interactive interface, and easy navigation.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">Figma</span>
+                            <!-- <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm">Firebase</span> -->
+                            
+                        </div>
+                        <a href="https://www.figma.com/design/TwTkNbBPN5T1F61CH89ciK/Project-UI-UX-Design?node-id=0-1&t=D9DSkldH7ecBqv0O-1" class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-300" target="_blank">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden">
+                        <img src="img/noufresh.png" alt="Weather Dashboard" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">UI/UX Design App Grocery</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">A fresh and modern grocery app UI/UX design, focusing on usability, clean layouts, and seamless shopping experience.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">Figma</span>
+                        </div>
+                        <a href="https://www.figma.com/design/PPDj7iuZONIjVutWgQAqoB/Portofolio--Muhammad-Nouval--Grocery-?node-id=668-7348&t=44UBfpmGzmHlGVfI-1" class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-300" target="_blank">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative overflow-hidden">
+                        <img src="img/port-me.png" alt="Social Media App" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">A personal portfolio website built with JavaScript. Features modern, simple interface and blazing fast performance.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Bootstrap</span>
+                            <!-- <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-sm">Redis</span> -->
+                        </div>
+                        <a href="https://github.com/Muhammad-Nouval-Pro/Portofolio-Muhammad-Nouval" class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-300" target="_blank">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+                    <div class="relative overflow-hidden">
+                        <img src="img/page-reservoire.png" alt="Portfolio Website" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">UI Web Design Reservoire</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">A clean web UI design for a reservoire management platform, focusing on usability and visual clarity.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">Figma</span>
+                            <!-- <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Tailwind</span> -->
+                            <!-- <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm">JavaScript</span> -->
+                        </div>
+                        <a href="https://www.figma.com/design/cT478rJYo6VEkz4givPJHC/Reservoire?node-id=3-40&t=YrShE9hZIa6V0TFq-1" class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-300" target="_blank">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="600">
+                    <div class="relative overflow-hidden">
+                        <img src="img/projek-photo.png" alt="AI Chatbot" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Landing Page Photo Gallery</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">A modern and responsive landing page for a photo gallery website. Features a clean layout, smooth animations, and easy navigation for users to explore and showcase photos.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Tailwind</span>
+                            <!-- <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">NLP</span> -->
+                        </div>
+                        <a href="https://github.com/Muhammad-Nouval-Pro/Web-Photo" class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-300" target="_blank">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4">Contact Me</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400">Let's work together on your next project</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-6">Let's Connect</h3>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+                        I'm always interested in hearing about new projects and opportunities. Whether you're a company looking to hire, or you're a fellow developer looking to collaborate, I'd love to hear from you.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full">
+                                <i class="fas fa-envelope text-blue-600 dark:text-blue-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <p class="text-gray-600 dark:text-gray-400">mnouvall990@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-green-100 dark:bg-green-900 p-3 rounded-full">
+                                <i class="fas fa-phone text-green-600 dark:text-green-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Phone</p>
+                                <p class="text-gray-600 dark:text-gray-400">+62 857-8012-2260</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-purple-100 dark:bg-purple-900 p-3 rounded-full">
+                                <i class="fas fa-map-marker-alt text-purple-600 dark:text-purple-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Location</p>
+                                <p class="text-gray-600 dark:text-gray-400">Depok, Indonesia🌎</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <!-- <div class="flex space-x-4 mt-8">
+                        <a href="#" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 hover:scale-110 transition-all duration-300">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 text-white p-3 rounded-full hover:bg-gray-900 hover:scale-110 transition-all duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 hover:scale-110 transition-all duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div> -->
+                </div>
+
+                <!-- Contact Form -->
+                <div data-aos="fade-left">
+                    <form id="contact-form" class="space-y-6">
+                        <!-- Name Field -->
+                        <div class="relative">
+                            <input type="text" id="name" name="name" required class="peer w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-900 focus:border-blue-500 focus:outline-none transition-colors duration-300">
+                            <label for="name" class="absolute left-4 top-3 text-gray-500 dark:text-gray-400 transition-all duration-300 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-500 peer-valid:-translate-y-6 peer-valid:scale-75">
+                                Your Name
+                            </label>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="relative">
+                            <input type="email" id="email" name="email" required class="peer w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-900 focus:border-blue-500 focus:outline-none transition-colors duration-300">
+                            <label for="email" class="absolute left-4 top-3 text-gray-500 dark:text-gray-400 transition-all duration-300 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-500 peer-valid:-translate-y-6 peer-valid:scale-75">
+                                Your Email
+                            </label>
+                        </div>
+
+                        <!-- Message Field -->
+                        <div class="relative">
+                            <textarea id="message" name="message" rows="5" required class="peer w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-900 focus:border-blue-500 focus:outline-none transition-colors duration-300 resize-none"></textarea>
+                            <label for="message" class="absolute left-4 top-3 text-gray-500 dark:text-gray-400 transition-all duration-300 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-500 peer-valid:-translate-y-6 peer-valid:scale-75">
+                                Your Message
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="success-message" class="hidden mt-4 p-4 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-lg">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        Message sent successfully! I'll get back to you soon.
+                    </div>
+
+                    <!-- Error Message -->
+                    <div id="error-message" class="hidden mt-4 p-4 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-lg">
+                        <i class="fas fa-exclamation-circle mr-2"></i>
+                        Please fill in all required fields.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
+                    Muhammad Nouval
+                </div>
+                <p class="text-gray-400 mb-6">Front End Developer & UI/UX Designer</p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://www.linkedin.com/in/muhammad-nouval-516094271?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="text-gray-400 hover:text-white transition-colors duration-300" target="_blank">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="https://github.com/Muhammad-Nouval-Pro" class="text-gray-400 hover:text-white transition-colors duration-300" target="_blank">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://wa.me/6285780122260" class="text-gray-400 hover:text-white transition-colors duration-300" target="_blank">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mnouvall_?igsh=MXQ2YnVtenV2ZWU2&utm_source=qr" class="text-gray-400 hover:text-white transition-colors duration-300" target="_blank">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                </div>
+                <div class="border-t border-gray-800 pt-8">
+                    <p class="text-gray-400">
+                         Muhammad Nouval. All rights reserved. Made with 💻 and lots of ☕
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
