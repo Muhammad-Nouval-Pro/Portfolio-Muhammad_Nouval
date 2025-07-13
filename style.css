@@ -3,7 +3,7 @@
 /* Pastikan semua section terlihat */
 body {
   transition: opacity 0.3s ease-in-out;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .loaded {
@@ -276,8 +276,8 @@ textarea:focus {
   }
 
   body {
-    /* background: white !important;
-    color: black !important; */
+    background: white !important;
+    color: black !important;
   }
 }
 
